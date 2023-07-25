@@ -1,0 +1,18 @@
+<div class="page-wrapper page">
+  <div class="container">
+    <section class="page-title">
+      <div class="row align-items-center">
+        <div class="col">
+          <h1 class="showcase-title h2">My Profile</h1>
+        </div>
+        <div class="col-md-6 col-5 text-end">
+          <a routerLink="/profile/edit" class="btn btn-warning"><i class="fa-solid fa-pencil"></i> Edit
+            Profile</a>
+        </div>
+      </div>
+    </section>
+    <section class="page-content mt-4" *ngIf="loggedInUser">
+      <app-user-info [user]="loggedInUser"></app-user-info>
+    </section>
+  </div>
+</div>

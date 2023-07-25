@@ -1,0 +1,11 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let option of sortOptions"><a role="button"
+          (click)="onChange(option.value)">{{option.label}}
+          <i class="fa-solid fa-arrow-up" *ngIf="sort === option.value && sortBy === SortBy.ASC"></i> <i
+            class="fa-solid fa-arrow-down" *ngIf="sort === option.value  && sortBy === SortBy.DESC"></i></a></th>
+    </tr>
+  </thead>
+  <ng-content></ng-content>
+</table>
